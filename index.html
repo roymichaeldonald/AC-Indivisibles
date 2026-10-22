@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Addison County Volunteer Calendar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1c579e;
+    --blue-dark:#154277;
+    --cream:#faf7eb;
+    --ink:#151515;
+    --line:#e3dcc6;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Work Sans',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+  }
+  header{
+    background:var(--blue);
+    color:var(--cream);
+    padding:28px 20px 24px;
+  }
+  header .inner{max-width:900px;margin:0 auto;}
+  header h1{margin:0 0 6px;font-size:1.6rem;font-weight:900;}
+  header p{margin:0;opacity:.9;font-size:.95rem;}
+  #countdown{
+    display:inline-block;margin-top:12px;background:var(--blue-dark);
+    border-radius:20px;padding:6px 16px;font-weight:700;font-size:.9rem;
+  }
+  main{max-width:900px;margin:0 auto;padding:20px;}
+  .filters{
+    display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;
+    position:sticky;top:0;background:var(--cream);padding:12px 0;z-index:5;
+  }
+  .chip{
+    border:1.5px solid var(--blue);color:var(--blue);background:#fff;
+    border-radius:20px;padding:6px 14px;font-size:.85rem;font-weight:600;
+    cursor:pointer;font-family:inherit;
+  }
+  .chip.active{background:var(--blue);color:#fff;}
+  .day-group{margin-bottom:28px;}
+  .day-heading{
+    font-size:1rem;font-weight:900;color:var(--blue-dark);
+    border-bottom:2px solid var(--line);padding-bottom:4px;margin-bottom:10px;
+    text-transform:uppercase;letter-spacing:.03em;
+  }
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;margin-bottom:10px;
+  }
+  .card-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;}
+  .card h3{margin:0;font-size:1.02rem;font-weight:700;}
+  .time{font-weight:700;color:var(--blue-dark);font-size:.9rem;white-space:nowrap;}
+  .meta{margin-top:4px;font-size:.88rem;color:#444;}
+  .meta .tag{
+    display:inline-block;background:#eef2f8;color:var(--blue-dark);
+    border-radius:12px;padding:1px 10px;font-size:.75rem;font-weight:700;
+    margin-right:6px;text-transform:uppercase;letter-spacing:.02em;
+  }
+  .desc{margin-top:8px;font-size:.9rem;line-height:1.4;color:#333;}
+  .signup{
+    display:inline-block;margin-top:10px;background:var(--blue);color:#fff;
+    text-decoration:none;font-weight:700;font-size:.85rem;padding:7px 16px;
+    border-radius:6px;
+  }
+  .signup:hover{background:var(--blue-dark);}
+  .flex-note{font-size:.78rem;color:#777;margin-top:6px;font-style:italic;}
+  footer{
+    max-width:900px;margin:0 auto;padding:20px;color:#777;font-size:.8rem;
+    border-top:1px solid var(--line);
+  }
+  .empty{text-align:center;padding:40px 10px;color:#777;}
+</style>
+</head>
+<body>
+<header>
+  <div class="inner">
+    <h1>Addison County Volunteer Calendar</h1>
+    <p>Canvassing, phone banking, and poll watching to get out the vote before November 3.</p>
+    <span id="countdown"></span>
+  </div>
+</header>
+
+<main>
+  <div class="filters" id="filters"></div>
+  <div id="list"></div>
+</main>
+
+<footer id="footer"></footer>
+
+<script>
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1mYQ7hzFnBxb56S57r_CP3w4mqF_f6fhTHv00la-slSU/gviz/tq?tqx=out:csv&sheet=Opportunities";
+const ELECTION_DAY = new Date(2026, 10, 3); // Nov 3, 2026 (month is 0-indexed)
+
+function parseCSV(text){
+  const rows = [];
+  let row = [], field = '', inQuotes = false;
+  for(let i=0;i<text.length;i++){
+    const c = text[i];
+    if(inQuotes){
+      if(c === '"'){
+        if(text[i+1] === '"'){ field += '"'; i++; }
+        else inQuotes = false;
+      } else field += c;
+    } else {
+      if(c === '"') inQuotes = true;
+      else if(c === ','){ row.push(field); field=''; }
+      else if(c === '\n'){ row.push(field); rows.push(row); row=[]; field=''; }
+      else if(c === '\r'){ /* skip */ }
+      else field += c;
+    }
+  }
+  if(field.length || row.length){ row.push(field); rows.push(row); }
+  return rows;
+}
+
+function rowsToRecords(rows){
+  const headerMap = {
+    "Date":"date","Day":"day","Time":"time","Start":"start","End":"end",
+    "Title":"title","Type":"type","From home":"fromHome","Place":"place",
+    "Meet at":"meetAt","Description":"description","Sign-up link":"signupUrl",
+    "Time flexible or unlisted":"flexible","Our notes":"notes","Active":"active"
+  };
+  const header = rows[0].map(h => headerMap[h.trim()] || h.trim());
+  return rows.slice(1).filter(r => r.some(c => c.trim() !== '')).map(r => {
+    const obj = {};
+    header.forEach((key, idx) => { obj[key] = (r[idx] || '').trim(); });
+    obj.fromHome = /^yes$/i.test(obj.fromHome);
+    obj.flexible = /^yes$/i.test(obj.flexible);
+    obj.active = /^true$/i.test(obj.active);
+    return obj;
+  });
+}
+
+function parseEventDate(dateStr){
+  if(!dateStr) return null;
+  const d = new Date(dateStr);
+  return isNaN(d.getTime()) ? null : d;
+}
+
+function isPast(dateStr){
+  const d = parseEventDate(dateStr);
+  if(!d) return false; // no date = flexible, never "past"
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  return d < today;
+}
+
+function render(records){
+  const list = document.getElementById('list');
+  const filtersEl = document.getElementById('filters');
+  const footer = document.getElementById('footer');
+
+  const active = records.filter(r => r.active && !isPast(r.date));
+
+  // countdown
+  const today = new Date(); today.setHours(0,0,0,0);
+  const daysLeft = Math.ceil((ELECTION_DAY - today) / 86400000);
+  document.getElementById('countdown').textContent =
+    daysLeft > 0 ? `${daysLeft} day${daysLeft===1?'':'s'} until Election Day` :
+    daysLeft === 0 ? "Today is Election Day!" : "Election Day has passed";
+
+  // type filter chips
+  const types = [...new Set(active.map(r => r.type).filter(Boolean))].sort();
+  let currentFilter = null;
+
+  function draw(){
+    filtersEl.innerHTML = '';
+    const allChip = document.createElement('button');
+    allChip.className = 'chip' + (currentFilter === null ? ' active' : '');
+    allChip.textContent = 'All';
+    allChip.onclick = () => { currentFilter = null; draw(); };
+    filtersEl.appendChild(allChip);
+    types.forEach(t => {
+      const chip = document.createElement('button');
+      chip.className = 'chip' + (currentFilter === t ? ' active' : '');
+      chip.textContent = t;
+      chip.onclick = () => { currentFilter = t; draw(); };
+      filtersEl.appendChild(chip);
+    });
+
+    const filtered = currentFilter ? active.filter(r => r.type === currentFilter) : active;
+
+    // group: dated first (sorted by date), then flexible/no-date at the end
+    const dated = filtered.filter(r => parseEventDate(r.date)).sort((a,b) => parseEventDate(a.date) - parseEventDate(b.date));
+    const flexible = filtered.filter(r => !parseEventDate(r.date));
+
+    list.innerHTML = '';
+    if(!dated.length && !flexible.length){
+      list.innerHTML = '<div class="empty">No opportunities match that filter right now.</div>';
+      return;
+    }
+
+    const groups = {};
+    dated.forEach(r => {
+      const key = r.date;
+      (groups[key] = groups[key] || []).push(r);
+    });
+
+    Object.keys(groups).forEach(dateKey => {
+      const groupDiv = document.createElement('div');
+      groupDiv.className = 'day-group';
+      const heading = document.createElement('div');
+      heading.className = 'day-heading';
+      heading.textContent = dateKey;
+      groupDiv.appendChild(heading);
+      groups[dateKey].forEach(r => groupDiv.appendChild(card(r)));
+      list.appendChild(groupDiv);
+    });
+
+    if(flexible.length){
+      const groupDiv = document.createElement('div');
+      groupDiv.className = 'day-group';
+      const heading = document.createElement('div');
+      heading.className = 'day-heading';
+      heading.textContent = 'No fixed date — sign up anytime';
+      groupDiv.appendChild(heading);
+      flexible.forEach(r => groupDiv.appendChild(card(r)));
+      list.appendChild(groupDiv);
+    }
+  }
+
+  function card(r){
+    const div = document.createElement('div');
+    div.className = 'card';
+    const place = r.fromHome ? 'From home' : [r.place, r.meetAt].filter(Boolean).join(' — ');
+    div.innerHTML = `
+      <div class="card-top">
+        <h3>${escapeHtml(r.title)}</h3>
+        <div class="time">${escapeHtml(r.time)}</div>
+      </div>
+      <div class="meta">
+        ${r.type ? `<span class="tag">${escapeHtml(r.type)}</span>` : ''}
+        ${escapeHtml(place)}
+      </div>
+      ${r.description ? `<div class="desc">${escapeHtml(r.description)}</div>` : ''}
+      ${r.signupUrl ? `<a class="signup" href="${escapeAttr(r.signupUrl)}" target="_blank" rel="noopener">Sign up</a>` : ''}
+      ${r.flexible && !r.fromHome ? '' : ''}
+    `;
+    return div;
+  }
+
+  draw();
+
+  footer.textContent = `Compiled from the Addison County volunteer calendar and the Lean Left Vermont Take Action page. This page refreshes from a shared Google Sheet — ping Mike to add or change an opportunity.`;
+}
+
+function escapeHtml(str){
+  const div = document.createElement('div');
+  div.textContent = str || '';
+  return div.innerHTML;
+}
+function escapeAttr(str){
+  return (str || '').replace(/"/g,'&quot;');
+}
+
+async function loadData(){
+  try{
+    const res = await fetch(SHEET_CSV_URL, {cache:'no-store'});
+    if(!res.ok) throw new Error('bad response');
+    const text = await res.text();
+    const rows = parseCSV(text);
+    const records = rowsToRecords(rows);
+    if(!records.length) throw new Error('no records');
+    render(records);
+  } catch(e){
+    // fall back to the bundled snapshot
+    try{
+      const res = await fetch('data.json', {cache:'no-store'});
+      const records = await res.json();
+      render(records);
+    } catch(e2){
+      document.getElementById('list').innerHTML = '<div class="empty">Could not load the volunteer calendar right now. Please try again shortly.</div>';
+    }
+  }
+}
+
+loadData();
+</script>
+</body>
+</html>
