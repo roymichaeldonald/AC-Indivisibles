@@ -35,9 +35,21 @@
     border-radius:20px;padding:6px 16px;font-weight:700;font-size:.9rem;
   }
   main{max-width:900px;margin:0 auto;padding:20px;}
+  .sticky-filters{
+    position:sticky;top:0;background:var(--cream);padding:12px 0 0;z-index:5;
+  }
+  .scope-switch{
+    display:flex;gap:0;margin-bottom:12px;border:1.5px solid var(--blue);
+    border-radius:20px;overflow:hidden;width:fit-content;
+  }
+  .scope-btn{
+    border:none;background:#fff;color:var(--blue);font-family:inherit;
+    font-size:.85rem;font-weight:700;padding:7px 16px;cursor:pointer;
+  }
+  .scope-btn + .scope-btn{border-left:1.5px solid var(--blue);}
+  .scope-btn.active{background:var(--blue);color:#fff;}
   .filters{
-    display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;
-    position:sticky;top:0;background:var(--cream);padding:12px 0;z-index:5;
+    display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;padding-bottom:12px;
   }
   .chip{
     border:1.5px solid var(--blue);color:var(--blue);background:#fff;
@@ -89,7 +101,10 @@
 </header>
 
 <main>
-  <div class="filters" id="filters"></div>
+  <div class="sticky-filters">
+    <div class="scope-switch" id="scopeSwitch"></div>
+    <div class="filters" id="filters"></div>
+  </div>
   <div id="list"></div>
 </main>
 
@@ -126,7 +141,8 @@ function rowsToRecords(rows){
     "Date":"date","Day":"day","Time":"time","Start":"start","End":"end",
     "Title":"title","Type":"type","From home":"fromHome","Place":"place",
     "Meet at":"meetAt","Description":"description","Sign-up link":"signupUrl",
-    "Time flexible or unlisted":"flexible","Our notes":"notes","Active":"active"
+    "Time flexible or unlisted":"flexible","Our notes":"notes","Active":"active",
+    "Scope":"scope"
   };
   const header = rows[0].map(h => headerMap[h.trim()] || h.trim());
   return rows.slice(1).filter(r => r.some(c => c.trim() !== '')).map(r => {
@@ -156,6 +172,7 @@ function isPast(dateStr){
 function render(records){
   const list = document.getElementById('list');
   const filtersEl = document.getElementById('filters');
+  const scopeEl = document.getElementById('scopeSwitch');
   const footer = document.getElementById('footer');
 
   const active = records.filter(r => r.active && !isPast(r.date));
@@ -167,15 +184,39 @@ function render(records){
     daysLeft > 0 ? `${daysLeft} day${daysLeft===1?'':'s'} until Election Day` :
     daysLeft === 0 ? "Today is Election Day!" : "Election Day has passed";
 
+  // scope switch: All / Federal Elections / Vermont Elections
+  const scopes = [...new Set(active.map(r => r.scope).filter(Boolean))];
+  const scopeOptions = [
+    {key: null, label: 'All'},
+    ...(scopes.includes('Federal') ? [{key:'Federal', label:'Federal Elections'}] : []),
+    ...(scopes.includes('Vermont') ? [{key:'Vermont', label:'Vermont Elections'}] : []),
+  ];
+  let currentScope = null;
+
   // type filter chips
-  const types = [...new Set(active.map(r => r.type).filter(Boolean))].sort();
   let currentFilter = null;
 
   function draw(){
+    // scope switch
+    scopeEl.innerHTML = '';
+    if(scopeOptions.length > 1){
+      scopeOptions.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'scope-btn' + (currentScope === opt.key ? ' active' : '');
+        btn.textContent = opt.label;
+        btn.onclick = () => { currentScope = opt.key; currentFilter = null; draw(); };
+        scopeEl.appendChild(btn);
+      });
+    }
+
+    const scoped = currentScope ? active.filter(r => r.scope === currentScope) : active;
+
+    // type chips, scoped to what's currently visible under the scope switch
     filtersEl.innerHTML = '';
+    const types = [...new Set(scoped.map(r => r.type).filter(Boolean))].sort();
     const allChip = document.createElement('button');
     allChip.className = 'chip' + (currentFilter === null ? ' active' : '');
-    allChip.textContent = 'All';
+    allChip.textContent = 'All types';
     allChip.onclick = () => { currentFilter = null; draw(); };
     filtersEl.appendChild(allChip);
     types.forEach(t => {
@@ -186,7 +227,7 @@ function render(records){
       filtersEl.appendChild(chip);
     });
 
-    const filtered = currentFilter ? active.filter(r => r.type === currentFilter) : active;
+    const filtered = currentFilter ? scoped.filter(r => r.type === currentFilter) : scoped;
 
     // group: dated first (sorted by date), then flexible/no-date at the end
     const dated = filtered.filter(r => parseEventDate(r.date)).sort((a,b) => parseEventDate(a.date) - parseEventDate(b.date));

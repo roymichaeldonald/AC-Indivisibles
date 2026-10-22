@@ -14,7 +14,8 @@
     "signupUrl": "https://mobilize.us/s/D1Crvd",
     "flexible": false,
     "notes": "",
-    "active": false
+    "active": false,
+    "scope": "Vermont"
   },
   {
     "date": "Wed Oct 21, 2026",
@@ -31,7 +32,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": false
+    "active": false,
+    "scope": "Federal"
   },
   {
     "date": "Thu Oct 22, 2026",
@@ -48,7 +50,8 @@
     "signupUrl": "https://mobilize.us/s/3kYSxN",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "Thu Oct 22, 2026",
@@ -60,12 +63,13 @@
     "type": "Door knocking",
     "fromHome": false,
     "place": "Middlebury",
-    "meetAt": "The green next to St. Stephen's Episcopal Church, 3 Main St",
+    "meetAt": "The green next to St. Stephen’s Episcopal Church, 3 Main St",
     "description": "Knock doors for Amanda Janoo, Ruth Hardy, Hannah Sessions, Mike Roy and Robin Scheu. Hosted by the VDP 2026 Coordinated Campaign.",
     "signupUrl": "https://mobilize.us/s/HudfEZ",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "Thu Oct 22, 2026",
@@ -82,7 +86,8 @@
     "signupUrl": "https://www.mobilize.us/red2blueorg/event/980565/",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Thu Oct 22, 2026",
@@ -99,7 +104,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Fri Oct 23, 2026",
@@ -116,7 +122,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sat Oct 24, 2026",
@@ -133,7 +140,8 @@
     "signupUrl": "https://mobilize.us/s/zr1jhM",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "Sat Oct 24, 2026",
@@ -150,7 +158,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sat Oct 24, 2026",
@@ -167,7 +176,8 @@
     "signupUrl": "https://docs.google.com/document/d/1v2DMHwQKxiiqbu5w-bRv0CvH5JoCCQtK9_9x53RJ67c/edit?usp=sharing",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sat Oct 24, 2026",
@@ -184,7 +194,8 @@
     "signupUrl": "https://www.mobilize.us/nydems2026/event/1041525/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sun Oct 25, 2026",
@@ -201,7 +212,8 @@
     "signupUrl": "https://mobilize.us/s/qyTvES",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "Sun Oct 25, 2026",
@@ -218,7 +230,8 @@
     "signupUrl": "https://mobilize.us/s/FBcsse",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sun Oct 25, 2026",
@@ -235,7 +248,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sun Oct 25, 2026",
@@ -252,7 +266,8 @@
     "signupUrl": "https://docs.google.com/document/d/1v2DMHwQKxiiqbu5w-bRv0CvH5JoCCQtK9_9x53RJ67c/edit?usp=sharing",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Mon Oct 26, 2026",
@@ -269,7 +284,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Tue Oct 27, 2026",
@@ -281,12 +297,13 @@
     "type": "Door knocking",
     "fromHome": false,
     "place": "East Middlebury",
-    "meetAt": "Ruth's house (sign up to get the address)",
+    "meetAt": "Ruth’s house (sign up to get the address)",
     "description": "",
     "signupUrl": "https://mobilize.us/s/lkvnV4",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "Tue Oct 27, 2026",
@@ -303,7 +320,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Wed Oct 28, 2026",
@@ -320,7 +338,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Thu Oct 29, 2026",
@@ -337,7 +356,8 @@
     "signupUrl": "https://mobilize.us/s/KjCWhE",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "Thu Oct 29, 2026",
@@ -354,7 +374,8 @@
     "signupUrl": "https://www.mobilize.us/red2blueorg/event/980565/",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Thu Oct 29, 2026",
@@ -371,7 +392,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Fri Oct 30, 2026",
@@ -388,7 +410,8 @@
     "signupUrl": "https://mobilize.us/s/1LTZTS",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "Fri Oct 30, 2026",
@@ -405,7 +428,44 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Fri Oct 30, 2026",
+    "day": "Friday",
+    "time": "3-6pm",
+    "start": "3:00 PM",
+    "end": "6:00 PM",
+    "title": "Canvass for Amanda Janoo and the Democratic team in Middlebury",
+    "type": "Door knocking",
+    "fromHome": false,
+    "place": "Middlebury",
+    "meetAt": "The green next to St. Stephen’s Episcopal Church, 3 Main St",
+    "description": "",
+    "signupUrl": "https://janooforvt.solidarity.tech/middlebury-saturday-canvass",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Vermont"
+  },
+  {
+    "date": "Sat Oct 31, 2026",
+    "day": "Saturday",
+    "time": "3-6pm",
+    "start": "3:00 PM",
+    "end": "6:00 PM",
+    "title": "Canvass for Amanda Janoo and the Democratic team in Middlebury",
+    "type": "Door knocking",
+    "fromHome": false,
+    "place": "Middlebury",
+    "meetAt": "The green next to St. Stephen’s Episcopal Church, 3 Main St",
+    "description": "",
+    "signupUrl": "https://mobilize.us/s/HudfEZ",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "Sat Oct 31, 2026",
@@ -417,12 +477,13 @@
     "type": "Door knocking",
     "fromHome": false,
     "place": "Middlebury",
-    "meetAt": "The green next to St. Stephen's Episcopal Church, 3 Main St",
+    "meetAt": "The green next to St. Stephen’s Episcopal Church, 3 Main St",
     "description": "",
     "signupUrl": "https://mobilize.us/s/HudfEZ",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sat Oct 31, 2026",
@@ -434,12 +495,13 @@
     "type": "Door knocking",
     "fromHome": false,
     "place": "Middlebury",
-    "meetAt": "The green next to St. Stephen's Episcopal Church, 3 Main St",
+    "meetAt": "The green next to St. Stephen’s Episcopal Church, 3 Main St",
     "description": "",
     "signupUrl": "https://mobilize.us/s/HudfEZ",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sat Oct 31, 2026",
@@ -456,7 +518,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sat Oct 31, 2026",
@@ -473,7 +536,8 @@
     "signupUrl": "https://docs.google.com/document/d/1v2DMHwQKxiiqbu5w-bRv0CvH5JoCCQtK9_9x53RJ67c/edit?usp=sharing",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "Sat Oct 31, 2026",
@@ -490,7 +554,8 @@
     "signupUrl": "https://www.mobilize.us/nydems2026/event/1041525/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "Sun Nov 1, 2026",
@@ -502,12 +567,13 @@
     "type": "Door knocking",
     "fromHome": false,
     "place": "Middlebury",
-    "meetAt": "The green next to St. Stephen's Episcopal Church, 3 Main St",
+    "meetAt": "The green next to St. Stephen’s Episcopal Church, 3 Main St",
     "description": "",
     "signupUrl": "https://mobilize.us/s/HudfEZ",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "Sun Nov 1, 2026",
@@ -519,12 +585,13 @@
     "type": "Door knocking",
     "fromHome": false,
     "place": "Middlebury",
-    "meetAt": "The green next to St. Stephen's Episcopal Church, 3 Main St",
+    "meetAt": "The green next to St. Stephen’s Episcopal Church, 3 Main St",
     "description": "",
     "signupUrl": "https://mobilize.us/s/HudfEZ",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sun Nov 1, 2026",
@@ -536,12 +603,13 @@
     "type": "Door knocking",
     "fromHome": false,
     "place": "Middlebury",
-    "meetAt": "The green next to St. Stephen's Episcopal Church, 3 Main St",
+    "meetAt": "The green next to St. Stephen’s Episcopal Church, 3 Main St",
     "description": "",
     "signupUrl": "https://mobilize.us/s/HudfEZ",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sun Nov 1, 2026",
@@ -558,7 +626,8 @@
     "signupUrl": "https://mobilize.us/s/FBcsse",
     "flexible": false,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sun Nov 1, 2026",
@@ -575,7 +644,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Sun Nov 1, 2026",
@@ -592,7 +662,8 @@
     "signupUrl": "https://docs.google.com/document/d/1v2DMHwQKxiiqbu5w-bRv0CvH5JoCCQtK9_9x53RJ67c/edit?usp=sharing",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Mon Nov 2, 2026",
@@ -609,7 +680,26 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Mon Nov 2, 2026",
+    "day": "Monday",
+    "time": "3pm - 6pm",
+    "start": "3:00 PM",
+    "end": "6:00 PM",
+    "title": "Canvass for Amanda Janoo and the Democratic team in Middlebury",
+    "type": "Door knocking",
+    "fromHome": false,
+    "place": "Middlebury",
+    "meetAt": "The green next to St. Stephen’s Episcopal Church, 3 Main St",
+    "description": "",
+    "signupUrl": "https://janooforvt.solidarity.tech/middlebury-saturday-canvass",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Tue Nov 3, 2026",
@@ -626,7 +716,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1040034/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Tue Nov 3, 2026",
@@ -643,7 +734,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1012282/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "",
@@ -660,7 +752,8 @@
     "signupUrl": "https://mobilize.us/s/umP6fX",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "",
@@ -677,7 +770,8 @@
     "signupUrl": "https://www.mobilize.us/organizenh/event/1028248/",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "",
@@ -694,7 +788,8 @@
     "signupUrl": "mailto:leanleftvt@gmail.com",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "",
@@ -711,7 +806,8 @@
     "signupUrl": "https://janooforvt.solidarity.tech/thursday-night-weekly-phone-bank-for-amanda-janoo",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "",
@@ -727,8 +823,9 @@
     "description": "Saturday phone banks for Amanda Janoo, with an afternoon and an evening session. Training, a calling script, and practice time are provided.",
     "signupUrl": "https://janooforvt.solidarity.tech/gotv-saturday-phone-banks",
     "flexible": true,
-    "notes": "Sign-up page lists an afternoon and evening session but the exact times load via JavaScript.",
-    "active": true
+    "notes": "Sign-up page lists an afternoon and evening session but the exact times load via JavaScript and weren't visible to fetch — confirm times before publishing.",
+    "active": true,
+    "scope": "Vermont"
   },
   {
     "date": "",
@@ -744,8 +841,9 @@
     "description": "Sunday phone banks for Amanda Janoo, with an afternoon and an evening session. Training, a calling script, and practice time are provided.",
     "signupUrl": "https://janooforvt.solidarity.tech/gotv-sunday-phone-banks",
     "flexible": true,
-    "notes": "Sign-up page lists an afternoon and evening session but the exact times load via JavaScript.",
-    "active": true
+    "notes": "Sign-up page lists an afternoon and evening session but the exact times load via JavaScript and weren't visible to fetch — confirm times before publishing.",
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "",
@@ -762,7 +860,8 @@
     "signupUrl": "https://janooforvt.solidarity.tech/tuesday-night-weekly-voter-id-phone-bank",
     "flexible": true,
     "notes": "",
-    "active": true
+    "active": true,
+    "scope": "Federal"
   },
   {
     "date": "Tue Oct 27, 2026",
@@ -779,6 +878,601 @@
     "signupUrl": "",
     "flexible": false,
     "notes": "No sign-up link given.",
-    "active": true
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Thu Oct 22, 2026",
+    "day": "Thursday",
+    "time": "6 pm–8 pm",
+    "start": "6:00 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Fri Oct 23, 2026",
+    "day": "Friday",
+    "time": "6 pm–8 pm",
+    "start": "6:00 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sat Oct 24, 2026",
+    "day": "Saturday",
+    "time": "9 am–12 pm",
+    "start": "9:00 AM",
+    "end": "12:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sat Oct 24, 2026",
+    "day": "Saturday",
+    "time": "12 pm–3 pm",
+    "start": "12:00 PM",
+    "end": "3:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sat Oct 24, 2026",
+    "day": "Saturday",
+    "time": "3 pm–6 pm",
+    "start": "3:00 PM",
+    "end": "6:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sat Oct 24, 2026",
+    "day": "Saturday",
+    "time": "6 pm–8 pm",
+    "start": "6:00 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sun Oct 25, 2026",
+    "day": "Sunday",
+    "time": "9 am–12 pm",
+    "start": "9:00 AM",
+    "end": "12:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sun Oct 25, 2026",
+    "day": "Sunday",
+    "time": "12 pm–3 pm",
+    "start": "12:00 PM",
+    "end": "3:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sun Oct 25, 2026",
+    "day": "Sunday",
+    "time": "3 pm–6 pm",
+    "start": "3:00 PM",
+    "end": "6:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sun Oct 25, 2026",
+    "day": "Sunday",
+    "time": "6 pm–8 pm",
+    "start": "6:00 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Mon Oct 26, 2026",
+    "day": "Monday",
+    "time": "6 pm–8 pm",
+    "start": "6:00 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Tue Oct 27, 2026",
+    "day": "Tuesday",
+    "time": "6 pm–8 pm",
+    "start": "6:00 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Wed Oct 28, 2026",
+    "day": "Wednesday",
+    "time": "6 pm–8 pm",
+    "start": "6:00 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Thu Oct 29, 2026",
+    "day": "Thursday",
+    "time": "6 pm–8 pm",
+    "start": "6:00 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Fri Oct 30, 2026",
+    "day": "Friday",
+    "time": "6 pm–8 pm",
+    "start": "6:00 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sat Oct 31, 2026",
+    "day": "Saturday",
+    "time": "9 am–12 pm",
+    "start": "9:00 AM",
+    "end": "12:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sat Oct 31, 2026",
+    "day": "Saturday",
+    "time": "12 pm–3 pm",
+    "start": "12:00 PM",
+    "end": "3:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sat Oct 31, 2026",
+    "day": "Saturday",
+    "time": "3 pm–6 pm",
+    "start": "3:00 PM",
+    "end": "6:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sat Oct 31, 2026",
+    "day": "Saturday",
+    "time": "6 pm–8 pm",
+    "start": "6:00 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sun Nov 1, 2026",
+    "day": "Sunday",
+    "time": "9 am–12 pm",
+    "start": "9:00 AM",
+    "end": "12:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sun Nov 1, 2026",
+    "day": "Sunday",
+    "time": "12 pm–3 pm",
+    "start": "12:00 PM",
+    "end": "3:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sun Nov 1, 2026",
+    "day": "Sunday",
+    "time": "3 pm–6 pm",
+    "start": "3:00 PM",
+    "end": "6:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sun Nov 1, 2026",
+    "day": "Sunday",
+    "time": "6 pm–8 pm",
+    "start": "6:00 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Mon Nov 2, 2026",
+    "day": "Monday",
+    "time": "9 am–12 pm",
+    "start": "9:00 AM",
+    "end": "12:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Mon Nov 2, 2026",
+    "day": "Monday",
+    "time": "12 pm–3 pm",
+    "start": "12:00 PM",
+    "end": "3:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Mon Nov 2, 2026",
+    "day": "Monday",
+    "time": "3 pm–6 pm",
+    "start": "3:00 PM",
+    "end": "6:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Mon Nov 2, 2026",
+    "day": "Monday",
+    "time": "6 pm–8 pm",
+    "start": "6:00 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Tue Nov 3, 2026",
+    "day": "Tuesday",
+    "time": "9 am–12 pm",
+    "start": "9:00 AM",
+    "end": "12:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Vermont"
+  },
+  {
+    "date": "Tue Nov 3, 2026",
+    "day": "Tuesday",
+    "time": "12 pm–3 pm",
+    "start": "12:00 PM",
+    "end": "3:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Tue Nov 3, 2026",
+    "day": "Tuesday",
+    "time": "3 pm–6 pm",
+    "start": "3:00 PM",
+    "end": "6:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Tue Nov 3, 2026",
+    "day": "Tuesday",
+    "time": "5:30 pm–8 pm",
+    "start": "5:30 PM",
+    "end": "8:00 PM",
+    "title": "Get Out the Vote Phone Bank for Maine Democrats (call voters from home)",
+    "type": "Phone banking",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Call Maine voters before Election Day with the Maine Coordinated Campaign. No prior phone banking or canvassing experience needed — every event starts with a training.",
+    "signupUrl": "https://www.mobilize.us/mainecoordinated/event/1043000/",
+    "flexible": false,
+    "notes": "",
+    "active": true,
+    "scope": "Federal"
+  },
+  {
+    "date": "Sat Oct 24, 2026",
+    "day": "Saturday",
+    "time": "5:30 pm–7:30 pm",
+    "start": "5:30 PM",
+    "end": "7:30 PM",
+    "title": "Election Observer & Coordinator Training with League of Women Voters VT",
+    "type": "Training",
+    "fromHome": true,
+    "place": "Virtual (Zoom)",
+    "meetAt": "",
+    "description": "LWV Vermont is recruiting volunteers to serve as community election observer coordinators and election poll observers statewide. The program takes place outside the polls, in parking lots and near voting entrances, with the goal of removing fear and normalizing voting during these polarizing times. Both observers and coordinators must attend one free Zoom training. Questions: membership@lwvofvt.org",
+    "signupUrl": "https://us.list-manage.com/3SoLE5ozfU6?e=29c6383241&c2id=7b66221acd984baed307a3c6a359d1bd",
+    "flexible": false,
+    "notes": "Sign-up link is a Mailchimp tracking link from the source newsletter — could not verify the final destination; confirm it resolves correctly before relying on it.",
+    "active": true,
+    "scope": "Vermont"
+  },
+  {
+    "date": "Sun Oct 25, 2026",
+    "day": "Sunday",
+    "time": "1 pm–2 pm",
+    "start": "1:00 PM",
+    "end": "2:00 PM",
+    "title": "GOTV Rally in Vergennes with Vermont Democrats",
+    "type": "Rally",
+    "fromHome": false,
+    "place": "Vergennes",
+    "meetAt": "Big Heart Social, 53-55 School St",
+    "description": "Hear from candidates and Congresswoman Becca Balint: Molly Gray (Lieutenant Governor), Ariel Bolles (VT House), John Stroup (VT House), Ruth Hardy (VT Senate), and Hannah Sessions (VT Senate).",
+    "signupUrl": "",
+    "flexible": false,
+    "notes": "No sign-up link given on the flyer. This is the rally that precedes the Panton/Waltham canvass (row already in sheet, 2:30–5 pm at the same location).",
+    "active": true,
+    "scope": "Vermont"
   }
 ]
