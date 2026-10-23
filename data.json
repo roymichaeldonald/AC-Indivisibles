@@ -222,7 +222,7 @@
     "start": "6:00 PM",
     "end": "8:00 PM",
     "title": "Training and Michigan Ballot Cure Phone Banking",
-    "type": "Phone banking",
+    "type": "Election Protection",
     "fromHome": true,
     "place": "From home",
     "meetAt": "",
@@ -231,7 +231,7 @@
     "flexible": false,
     "notes": "Once trained time is flexible",
     "active": true,
-    "scope": ""
+    "scope": "Federal"
   },
   {
     "date": "Mon Oct 26, 2026",
@@ -420,7 +420,7 @@
     "start": "2:00 PM",
     "end": "4:00 PM",
     "title": "Training and Michigan Ballot Cure Phone Banking",
-    "type": "Phone banking",
+    "type": "Election Protection",
     "fromHome": true,
     "place": "From home",
     "meetAt": "",
@@ -429,7 +429,7 @@
     "flexible": false,
     "notes": "Once trained time is flexible",
     "active": true,
-    "scope": ""
+    "scope": "Federal"
   },
   {
     "date": "Sat Oct 24, 2026",
@@ -492,7 +492,7 @@
     "start": "5:30 PM",
     "end": "7:30 PM",
     "title": "Election Observer & Coordinator Training with League of Women Voters VT",
-    "type": "Poll watching",
+    "type": "Election Protection",
     "fromHome": true,
     "place": "Virtual (Zoom)",
     "meetAt": "",
@@ -1482,7 +1482,7 @@
     "start": "6:00 PM",
     "end": "8:00 PM",
     "title": "Training and Michigan Ballot Cure Phone Banking",
-    "type": "Phone banking",
+    "type": "Election Protection",
     "fromHome": true,
     "place": "From home",
     "meetAt": "",
@@ -1491,7 +1491,7 @@
     "flexible": false,
     "notes": "Once trained time is flexible",
     "active": true,
-    "scope": ""
+    "scope": "Federal"
   },
   {
     "date": "Wed Oct 28, 2026",
@@ -1644,7 +1644,7 @@
     "start": "",
     "end": "",
     "title": "Poll observer in New Hampshire",
-    "type": "Poll watching",
+    "type": "Election Protection",
     "fromHome": false,
     "place": "New Hampshire polling places",
     "meetAt": "",
