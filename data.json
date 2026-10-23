@@ -1906,5 +1906,23 @@
     "notes": "National tool — availability depends on whether the volunteer's address falls in a target Senate/House district.",
     "active": true,
     "scope": "Federal"
+  },
+  {
+    "date": "Mon Oct 26, 2026",
+    "day": "Monday",
+    "time": "By 8 am",
+    "start": "8:00 AM",
+    "end": "",
+    "title": "Letter to the Addison Independent",
+    "type": "Write a letter",
+    "fromHome": true,
+    "place": "From home",
+    "meetAt": "",
+    "description": "Write in support of your local and statewide candidates, or explain why you won't be voting for their opponent.",
+    "signupUrl": "https://www.addisonindependent.com/send-a-letter-to-the-editor/",
+    "flexible": false,
+    "notes": "Hard deadline: submit by Monday, October 26 at 8 am.",
+    "active": true,
+    "scope": "Vermont"
   }
 ]
