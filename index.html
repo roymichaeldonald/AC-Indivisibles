@@ -378,7 +378,7 @@ function render(records){
         ${escapeHtml(place)}
       </div>
       ${r.description ? `<div class="desc">${escapeHtml(r.description)}</div>` : ''}
-      ${r.signupUrl ? `<a class="signup" href="${escapeAttr(r.signupUrl)}" target="_blank" rel="noopener">Sign up</a>` : ''}
+      ${r.signupUrl ? `<a class="signup" href="${escapeAttr(r.signupUrl)}" target="_blank" rel="noopener">${r.type === 'Write a letter' ? 'Submit' : 'Sign up'}</a>` : ''}
       ${r.flexible && !r.fromHome ? '' : ''}
     `;
     return div;
