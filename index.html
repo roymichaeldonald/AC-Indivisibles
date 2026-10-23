@@ -49,15 +49,32 @@
   .scope-btn + .scope-btn{border-left:1.5px solid var(--blue);}
   .scope-btn.active{background:var(--blue);color:#fff;}
   .filters{
-    display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;padding-bottom:12px;
+    display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;padding-bottom:12px;
   }
+  .day-nav{
+    display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;padding-bottom:12px;
+    border-bottom:1px solid var(--line);
+  }
+  .day-nav-btn{
+    border:1.5px solid var(--line);background:#fff;border-radius:8px;
+    padding:4px 10px;cursor:pointer;font-family:inherit;text-align:center;
+    min-width:46px;line-height:1.15;
+  }
+  .day-nav-btn .dow{
+    display:block;font-size:.62rem;font-weight:700;color:#777;
+    text-transform:uppercase;letter-spacing:.03em;
+  }
+  .day-nav-btn .dom{display:block;font-size:1rem;font-weight:900;color:var(--ink);}
+  .day-nav-btn:hover{border-color:var(--blue);}
+  .day-nav-btn.flex{min-width:auto;padding:6px 14px;}
+  .day-nav-btn.flex .dow{font-size:.68rem;}
   .chip{
     border:1.5px solid var(--blue);color:var(--blue);background:#fff;
     border-radius:20px;padding:6px 14px;font-size:.85rem;font-weight:600;
     cursor:pointer;font-family:inherit;
   }
   .chip.active{background:var(--blue);color:#fff;}
-  .day-group{margin-bottom:28px;}
+  .day-group{margin-bottom:28px;scroll-margin-top:150px;}
   .day-heading{
     font-size:1rem;font-weight:900;color:var(--blue-dark);
     border-bottom:2px solid var(--line);padding-bottom:4px;margin-bottom:10px;
@@ -104,6 +121,7 @@
   <div class="sticky-filters">
     <div class="scope-switch" id="scopeSwitch"></div>
     <div class="filters" id="filters"></div>
+    <div class="day-nav" id="dayNav"></div>
   </div>
   <div id="list"></div>
 </main>
@@ -187,6 +205,7 @@ function render(records){
   const list = document.getElementById('list');
   const filtersEl = document.getElementById('filters');
   const scopeEl = document.getElementById('scopeSwitch');
+  const dayNavEl = document.getElementById('dayNav');
   const footer = document.getElementById('footer');
 
   const active = records.filter(r => r.active && !isPast(r.date));
@@ -269,9 +288,36 @@ function render(records){
       });
     });
 
-    Object.keys(groups).forEach(dateKey => {
+    // jump-to-day boxes, one per visible day (plus "Anytime" if applicable)
+    dayNavEl.innerHTML = '';
+    const dateKeys = Object.keys(groups);
+    dateKeys.forEach((dateKey, i) => {
+      const anchorId = `day-group-${i}`;
+      const d = parseEventDate(dateKey);
+      const btn = document.createElement('button');
+      btn.className = 'day-nav-btn';
+      const dow = d ? d.toLocaleDateString('en-US', {weekday:'short'}).toUpperCase() : '';
+      const dom = d ? d.getDate() : dateKey;
+      btn.innerHTML = `<span class="dow">${dow}</span><span class="dom">${dom}</span>`;
+      btn.onclick = () => {
+        document.getElementById(anchorId)?.scrollIntoView({behavior:'smooth', block:'start'});
+      };
+      dayNavEl.appendChild(btn);
+    });
+    if(flexible.length){
+      const btn = document.createElement('button');
+      btn.className = 'day-nav-btn flex';
+      btn.innerHTML = `<span class="dow">Sign up</span><span class="dom" style="font-size:.85rem;">Anytime</span>`;
+      btn.onclick = () => {
+        document.getElementById('day-group-flex')?.scrollIntoView({behavior:'smooth', block:'start'});
+      };
+      dayNavEl.appendChild(btn);
+    }
+
+    dateKeys.forEach((dateKey, i) => {
       const groupDiv = document.createElement('div');
       groupDiv.className = 'day-group';
+      groupDiv.id = `day-group-${i}`;
       const heading = document.createElement('div');
       heading.className = 'day-heading';
       heading.textContent = dateKey;
@@ -283,6 +329,7 @@ function render(records){
     if(flexible.length){
       const groupDiv = document.createElement('div');
       groupDiv.className = 'day-group';
+      groupDiv.id = 'day-group-flex';
       const heading = document.createElement('div');
       heading.className = 'day-heading';
       heading.textContent = 'No fixed date — sign up anytime';
