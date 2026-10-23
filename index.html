@@ -179,6 +179,23 @@ function parseEventDate(dateStr){
   return isNaN(d.getTime()) ? null : d;
 }
 
+// URL query params for shareable filtered links, e.g. ?scope=federal&type=phone+banking
+function getUrlFilters(){
+  const p = new URLSearchParams(window.location.search);
+  return {
+    scope: p.get('scope'),
+    type: p.get('type'),
+  };
+}
+function setUrlFilters(scope, type){
+  const p = new URLSearchParams(window.location.search);
+  scope ? p.set('scope', scope) : p.delete('scope');
+  type ? p.set('type', type) : p.delete('type');
+  const qs = p.toString();
+  const newUrl = window.location.pathname + (qs ? '?' + qs : '');
+  window.history.replaceState(null, '', newUrl);
+}
+
 function isPast(dateStr){
   const d = parseEventDate(dateStr);
   if(!d) return false; // no date = flexible, never "past"
@@ -224,7 +241,9 @@ function render(records){
     ...(scopes.includes('Federal') ? [{key:'Federal', label:'Federal Elections'}] : []),
     ...(scopes.includes('Vermont') ? [{key:'Vermont', label:'Vermont Elections'}] : []),
   ];
-  let currentScope = null;
+  // initialize from the URL so a filtered link opens pre-filtered
+  const urlFilters = getUrlFilters();
+  let currentScope = scopeOptions.find(o => o.key && o.key.toLowerCase() === (urlFilters.scope || '').toLowerCase())?.key || null;
 
   // type filter chips
   let currentFilter = null;
@@ -237,7 +256,7 @@ function render(records){
         const btn = document.createElement('button');
         btn.className = 'scope-btn' + (currentScope === opt.key ? ' active' : '');
         btn.textContent = opt.label;
-        btn.onclick = () => { currentScope = opt.key; currentFilter = null; draw(); };
+        btn.onclick = () => { currentScope = opt.key; currentFilter = null; setUrlFilters(currentScope, currentFilter); draw(); };
         scopeEl.appendChild(btn);
       });
     }
@@ -247,16 +266,22 @@ function render(records){
     // type chips, scoped to what's currently visible under the scope switch
     filtersEl.innerHTML = '';
     const types = [...new Set(scoped.map(r => r.type).filter(Boolean))].sort();
+    // on first draw, resolve any ?type= from the URL now that we know what's available
+    if(urlFilters.type !== undefined && urlFilters.type !== null){
+      const match = types.find(t => t.toLowerCase() === urlFilters.type.toLowerCase());
+      if(match) currentFilter = match;
+      urlFilters.type = null; // only apply once, on load
+    }
     const allChip = document.createElement('button');
     allChip.className = 'chip' + (currentFilter === null ? ' active' : '');
     allChip.textContent = 'All types';
-    allChip.onclick = () => { currentFilter = null; draw(); };
+    allChip.onclick = () => { currentFilter = null; setUrlFilters(currentScope, currentFilter); draw(); };
     filtersEl.appendChild(allChip);
     types.forEach(t => {
       const chip = document.createElement('button');
       chip.className = 'chip' + (currentFilter === t ? ' active' : '');
       chip.textContent = t;
-      chip.onclick = () => { currentFilter = t; draw(); };
+      chip.onclick = () => { currentFilter = t; setUrlFilters(currentScope, currentFilter); draw(); };
       filtersEl.appendChild(chip);
     });
 
