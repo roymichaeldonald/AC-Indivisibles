@@ -169,6 +169,20 @@ function isPast(dateStr){
   return d < today;
 }
 
+// Pulls the first clock time (e.g. "3 pm", "10:30 am") out of a string
+// and returns minutes since midnight, or null if none found.
+function parseTimeMinutes(str){
+  if(!str) return null;
+  const m = str.match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)/i);
+  if(!m) return null;
+  let h = parseInt(m[1], 10);
+  const mins = m[2] ? parseInt(m[2], 10) : 0;
+  const ap = m[3].toLowerCase();
+  if(ap === 'pm' && h !== 12) h += 12;
+  if(ap === 'am' && h === 12) h = 0;
+  return h * 60 + mins;
+}
+
 function render(records){
   const list = document.getElementById('list');
   const filtersEl = document.getElementById('filters');
@@ -243,6 +257,16 @@ function render(records){
     dated.forEach(r => {
       const key = r.date;
       (groups[key] = groups[key] || []).push(r);
+    });
+
+    // within each day, sort events by start time (events with no parseable
+    // start time, like all-day or multi-shift listings, sort to the end)
+    Object.keys(groups).forEach(dateKey => {
+      groups[dateKey].sort((a, b) => {
+        const ta = parseTimeMinutes(a.start) ?? parseTimeMinutes(a.time) ?? Infinity;
+        const tb = parseTimeMinutes(b.start) ?? parseTimeMinutes(b.time) ?? Infinity;
+        return ta - tb;
+      });
     });
 
     Object.keys(groups).forEach(dateKey => {
